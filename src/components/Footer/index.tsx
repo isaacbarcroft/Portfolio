@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         bottom: 0,
         flexDirection: "row",
         marginInline: 32,
-        marginBlock: 64,
+        marginBlock: 32,
         justifyContent: "flex-start",
         alignSelf: "flex-start",
       }}
