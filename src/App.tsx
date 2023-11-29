@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./fonts/BroadwayD.ttf";
 import "./App.css";
-import headshot from "./images/headshot.jpg";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -33,9 +32,11 @@ const App = () => {
         ) : (
           <>
             <img
-              src="src/assets/headshot.jpg"
+              src={require("/Users/isaacbarcroft/Documents/Portfolio/Portfolio/src/assets/headshot.jpg")}
               className="App-logo"
               alt="logo"
+              width="25%"
+              height="35%"
               style={{ borderRadius: "50%" }}
             />
             <div
