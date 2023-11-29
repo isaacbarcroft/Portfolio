@@ -8,11 +8,14 @@
 }
 
 .App-header {
+  margin: 24px;
+  border: 1px #0bd2d3 solid;
+  padding: 16px;
   background-color: #282c34;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content: start;
   color: #f990e8;
   max-height: 100vh;
   flex: 1;
@@ -35,4 +38,68 @@
   flex: 1;
   overflow: scroll;
   font-family: "BroadwayD";
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+.shimmer-effect {
+  color: #f990e8; /* Set initial text color to match shimmer color */
+  padding: 20px; /* Add padding for better visibility */
+  position: relative; /* Add position relative for pseudo-element */
+  overflow: hidden; /* Hide overflow to contain pseudo-element */
+  transition: text-shadow 0.5s; /* Add a smooth transition for the text shadow */
+}
+
+.shimmer-effect:hover {
+  text-shadow: 0 0 10px #f990e8, 0 0 20px #f990e8, 0 0 30px #f990e8; /* Apply multiple text shadows for the shimmer effect */
+}
+.icon-container {
+  display: inline-block;
+  margin: 8px;
+}
+
+.anchor-link {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.anchor-link:hover {
+  transform: scale(1.1); /* Increase the size on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover */
+}
+@keyframes shimmerLoader {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.shimmer-loader {
+  overflow: hidden;
+  position: relative;
+}
+
+.shimmer-loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  color: #0bd2d3;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmerLoader 1.5s infinite;
 }
