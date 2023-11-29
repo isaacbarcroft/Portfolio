@@ -2,23 +2,38 @@ import React from "react";
 
 const LinkedInIcon: React.FC = () => {
   return (
-    <a
-      href="https://www.linkedin.com/in/isaac-barcroft/"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="58"
-        height="56"
-        viewBox="0 0 24 24"
+    <div className="icon-container anchor-link">
+      <a
+        href="https://www.linkedin.com/in/isaac-barcroft/"
+        target="_blank"
+        rel="noreferrer"
       >
-        <path
-          d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-          fill="#ff6ec7"
-        />
-      </svg>
-    </a>
+        <svg
+          enable-background="new 0 0 512 512"
+          height="32px"
+          width="32 px"
+          id="Layer_1"
+          version="1.1"
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              clip-rule="evenodd"
+              d="M256.23,512C396.81,512,512,396.81,512,256.23   C512,115.184,396.81,0,256.23,0C115.184,0,0,115.184,0,256.23C0,396.81,115.184,512,256.23,512L256.23,512z"
+              fill="#ff6ec7"
+              fill-rule="evenodd"
+            />
+            <path
+              clip-rule="evenodd"
+              d="M175.958,399.98h-48.073V175.958h48.073V399.98z M329.238,175.958   c42.621,0,70.742,24.935,70.742,80.272v143.75h-48.072V272.088c0-30.832-11.327-48.064-37.637-48.064s-58.041,22.224-58.041,48.064   V399.98H208.15V175.958h48.081v32.192C272.088,191.823,295.68,175.958,329.238,175.958L329.238,175.958z M151.922,79.812   c17.686,0,32.199,14.514,32.199,32.2s-14.514,31.747-32.199,31.747c-17.686,0-32.2-14.061-32.2-31.747   S134.236,79.812,151.922,79.812L151.922,79.812z"
+              fill="#282c34"
+              fill-rule="evenodd"
+            />
+          </g>
+        </svg>
+      </a>
+    </div>
   );
 };
 
