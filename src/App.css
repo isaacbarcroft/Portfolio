@@ -1,9 +1,21 @@
+@font-face {
+  font-family: "BroadwayD";
+  src: url("./fonts/BroadwayD.ttf") format("truetype");
+}
 .App {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
+  background-color: #282c34;
+}
+.Loading {
+  min-height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #282c34;
 }
 
@@ -20,11 +32,6 @@
   max-height: 100vh;
   flex: 1;
   position: sticky;
-}
-
-@font-face {
-  font-family: "BroadwayD";
-  src: url("./fonts/BroadwayD.ttf") format("truetype");
 }
 
 .App-main {
@@ -51,14 +58,14 @@
 
 .shimmer-effect {
   color: #f990e8; /* Set initial text color to match shimmer color */
-  padding: 20px; /* Add padding for better visibility */
+  padding: 10px; /* Add padding for better visibility */
   position: relative; /* Add position relative for pseudo-element */
   overflow: hidden; /* Hide overflow to contain pseudo-element */
   transition: text-shadow 0.5s; /* Add a smooth transition for the text shadow */
 }
 
 .shimmer-effect:hover {
-  text-shadow: 0 0 10px #f990e8, 0 0 20px #f990e8, 0 0 30px #f990e8; /* Apply multiple text shadows for the shimmer effect */
+  text-shadow: 0 0 5px #f990e8, 0 0 10px #f990e8, 0 0 15px #f990e8;
 }
 .icon-container {
   display: inline-block;
@@ -94,12 +101,11 @@
   left: -100%;
   width: 200%;
   height: 100%;
-  color: #0bd2d3;
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0)
+    rgba(11, 210, 211, 0),
+    rgba(11, 210, 211, 0.3),
+    rgba(11, 210, 211, 0)
   );
   animation: shimmerLoader 1.5s infinite;
 }
