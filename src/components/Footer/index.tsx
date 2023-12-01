@@ -1,6 +1,8 @@
 import React from "react";
 import GithubIcon from "../../images/github";
 import LinkedInIcon from "../../images/linkedIn";
+import EmailIcon from "../../images/email";
+import ResumeIcon from "../../images/resume";
 
 const Footer: React.FC = () => {
   return (
@@ -18,6 +20,8 @@ const Footer: React.FC = () => {
     >
       <GithubIcon />
       <LinkedInIcon />
+      <EmailIcon />
+      <ResumeIcon />
     </div>
   );
 };
