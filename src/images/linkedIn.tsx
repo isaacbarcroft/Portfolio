@@ -2,7 +2,7 @@ import React from "react";
 
 const LinkedInIcon: React.FC = () => {
   return (
-    <div className="icon-container anchor-link">
+    <div className="anchor-link">
       <a
         href="https://www.linkedin.com/in/isaac-barcroft/"
         target="_blank"
