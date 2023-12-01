@@ -3,7 +3,7 @@ import "../App.css";
 
 const GithubIcon: React.FC = () => {
   return (
-    <div className="icon-container anchor-link">
+    <div className="anchor-link">
       <a
         href="https://github.com/isaacbarcroft"
         target="_blank"
@@ -11,11 +11,11 @@ const GithubIcon: React.FC = () => {
       >
         <svg
           enable-background="new 0 0 512 512"
+          width="32px"
           height="32px"
           id="Layer_1"
           version="1.1"
           viewBox="0 0 512 512"
-          width="32px"
           xmlns="http://www.w3.org/2000/svg"
         >
           <g>
