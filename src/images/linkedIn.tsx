@@ -21,7 +21,7 @@ const LinkedInIcon: React.FC = () => {
             <path
               clip-rule="evenodd"
               d="M256.23,512C396.81,512,512,396.81,512,256.23   C512,115.184,396.81,0,256.23,0C115.184,0,0,115.184,0,256.23C0,396.81,115.184,512,256.23,512L256.23,512z"
-              fill="#ff6ec7"
+              fill="#0bd2d3"
               fill-rule="evenodd"
             />
             <path
