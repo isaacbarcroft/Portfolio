@@ -1,18 +1,30 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./fonts/BroadwayD.ttf";
 import "./App.css";
+import { Document, Page } from "react-pdf";
+import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
+import "./assets/resume.pdf";
 import Header from "./components/Header";
+import Uled from "./components/ULED";
+import Nicer from "./components/Nicer";
+import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
 
 const App = () => {
+  const location = useLocation();
+  console.log({ location });
   const [loading, setLoading] = useState(true);
-  const [showMainApp, setShowMainApp] = useState(false);
-
+  const [showResume, setShowResume] = useState(false);
+  const root = location.pathname === "/";
+  const uled = location.pathname === "/uled";
+  const agriculture = location.pathname === "/agriculture";
+  const mywell = location.pathname === "/mywell";
+  console.log({ root });
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-      setShowMainApp(true);
     }, 1500);
 
     return () => clearTimeout(timer);
@@ -37,9 +49,12 @@ const App = () => {
   return (
     <div className="App">
       <div className="App-header">
-        <Header setShowMainApp={setShowMainApp} />
+        <Header />
         <div className="content-Container ">
-          {showMainApp && <Greeting />}
+          {root && <Greeting />}
+          {mywell && <MyWell />}
+          {uled && <Uled />}
+          {agriculture && <Nicer />}
           <div
             style={{
               display: "flex",
@@ -48,17 +63,27 @@ const App = () => {
               width: "40%",
             }}
           >
-            <div
-              style={{
-                fontFamily: "BroadwayD",
-                fontWeight: "bold",
-                fontSize: "1rem",
-                marginBottom: 8,
-              }}
-              onClick={() => setShowMainApp(false)}
-            >
-              My Work
-            </div>
+            <Link to="/" className="link">
+              <div
+                style={{
+                  fontFamily: "BroadwayD",
+                  fontWeight: "bold",
+                  fontSize: "1rem",
+                  marginBottom: 8,
+                }}
+              >
+                My Work
+              </div>
+            </Link>
+            <Link to="/mywell" className="link">
+              <div>My Well</div>
+            </Link>
+            <Link to="/uled" className="link">
+              <div>Universal Ledger</div>
+            </Link>
+            <Link to="/agriculture" className="link">
+              <div>Agricultural Sales Application</div>
+            </Link>
           </div>
         </div>
 
