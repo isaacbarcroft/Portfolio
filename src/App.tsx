@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./fonts/BroadwayD.ttf";
 import "./App.css";
-import { Document, Page } from "react-pdf";
 import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import "./assets/resume.pdf";
@@ -33,17 +32,16 @@ const App = () => {
   if (loading)
     return (
       <div className="Loading">
-        <p
+        <div
           className="shimmer-loader"
           style={{
             fontWeight: "bold",
             fontSize: "2rem",
             fontFamily: "BroadwayD",
-            color: "#F990E8",
           }}
         >
-          Isaac Barcroft's Portfolio
-        </p>
+          <span className="loading-text">Isaac Barcroft's Portfolio</span>
+        </div>
       </div>
     );
   return (
