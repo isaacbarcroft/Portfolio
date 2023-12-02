@@ -22,6 +22,7 @@
 .App-header {
   margin: 24px;
   border: 1px #0bd2d3 solid;
+  box-shadow: 0 0 20px #f990e8;
   padding: 16px;
   background-color: #282c34;
   display: flex;
@@ -98,16 +99,16 @@
 
 .App-logo {
   display: flex;
-  border: 1px #0bd2d3 solid;
+  border: 1px #f990e8 solid;
   border-radius: 50%;
   margin: 10px;
-  box-shadow: 0 0 10px #0bd2d3;
+  box-shadow: 0 0 10px #f990e8;
   transition: box-shadow 0.3s ease-in-out;
 }
 
 .App-logo:hover {
   cursor: pointer;
-  box-shadow: 0 0 20px #0bd2d3;
+  box-shadow: 0 0 20px #f990e8;
 }
 
 .content-Container {
@@ -140,4 +141,18 @@
 
 .popup div:hover {
   background-color: #f1f1f1;
+}
+
+.link {
+  text-decoration: none;
+  color: #f990e8;
+  font-size: 16px;
+}
+
+.tech-icons {
+  border: 1px #f990e8 solid;
+  /* border-radius: 16px; */
+  color: #0bd2d3;
+  padding: 8px;
+  margin: 8px;
 }
