@@ -23,6 +23,7 @@ export const GradientText = styled.span`
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  font-family: BroadwayD;
 `;
 export const Text = styled.div`
   color: #0bd2d3;

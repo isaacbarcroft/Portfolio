@@ -11,11 +11,13 @@ import {
 const Header: React.FC = () => (
   <Container>
     <Link to="/" className="link">
-      <TitleWrapper className="shimmer-effect">
+      <TitleWrapper>
         <Title>
           <GradientText>Isaac Barcroft</GradientText>
         </Title>
-        <SubTitle>Software Engineer</SubTitle>
+        <SubTitle>
+          <GradientText>Software Engineer</GradientText>
+        </SubTitle>
       </TitleWrapper>
     </Link>
     <Link to="/" className="link">
