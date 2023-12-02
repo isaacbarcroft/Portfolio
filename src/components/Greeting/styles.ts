@@ -18,6 +18,12 @@ export const Title = styled.div`
   margin-bottom: 8px;
 `;
 
+export const GradientText = styled.span`
+  background: linear-gradient(90deg, #0bd2d3, #f990e8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+`;
 export const Text = styled.div`
   color: #0bd2d3;
   margin-bottom: 16px;

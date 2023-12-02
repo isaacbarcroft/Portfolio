@@ -1,21 +1,23 @@
 import React from "react";
-import { Container, Title, Text } from "./styles";
+import { Container, Title, Text, GradientText } from "./styles";
 
 const Greeting = () => (
   <Container>
-    <Title>Greetings!</Title>
+    <Title>
+      <GradientText>Greetings!</GradientText>
+    </Title>
     <Text>
       I'm Isaac Barcroft, a React TypeScript software engineer based in
-      Greenville, SC. Between coding sessions, I'm deeply immersed in the world
-      of soccer, fueled by an avid passion for the beautiful game.
+      Greenville, SC. When I'm not coding, you'll catch me either on the soccer
+      field or delving into the realms of ancient history. I'm always on the
+      lookout to learn something new.
     </Text>
     <Text style={{ color: "#0bd2d3" }}>
       {" "}
-      I specialize in React and TypeScript, my code reflects a blend of
-      precision and creativity. Whether it's crafting seamless user experiences
-      or navigating the intricacies of a soccer match, I thrive on the thrill of
-      the game. Join me on this exciting journey of software innovation and
-      soccer enthusiasm!
+      My expertise spans React, TypeScript, Node.js, and freelance projects.
+      With a passion for teaching, I'm dedicated to helping others achieve
+      greatness through sharing my knowledge in the dynamic world of web
+      development.
     </Text>
   </Container>
 );
