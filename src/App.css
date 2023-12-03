@@ -7,7 +7,6 @@
   justify-content: space-between;
   flex-direction: row;
   min-height: 100vh;
-  max-height: 100vh;
   background-color: black;
 }
 .Resume {
@@ -47,7 +46,7 @@ iframe {
   align-items: flex-start;
   justify-content: flex-start;
   color: #f990e8;
-  max-height: 100vh;
+  /* max-height: 100vh; */
   flex: 1;
   position: sticky;
 }
@@ -134,22 +133,14 @@ iframe {
   justify-content: space-between;
   width: 100%;
 }
-@media (width < 768px) {
-  .App {
-    /* height: 100%;
-    width: 100%; */
-  }
-  .content-Container {
-    flex-direction: column;
-  }
-}
 
 .popup {
   position: absolute;
   top: 40px;
   left: 50%;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  width: max-content;
+  background-color: black;
+  border: 1px solid #f990e8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 8px;
   border-radius: 4px;
@@ -205,4 +196,16 @@ iframe {
   cursor: pointer;
   transform: scale(1.1);
   text-shadow: 0 0 5px #f990e8, 0 0 10px #f990e8, 0 0 15px #f990e8;
+}
+@media (width < 768px) {
+  .App {
+    height: min-content;
+    width: 100%;
+  }
+  .content-Container {
+    flex-direction: column;
+  }
+  .works {
+    width: 100%;
+  }
 }

@@ -9,7 +9,6 @@ const Footer: React.FC = () => {
     <div
       style={{
         display: "flex",
-        position: "absolute",
         bottom: 0,
         flexDirection: "row",
         marginInline: 32,
