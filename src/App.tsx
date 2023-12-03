@@ -9,7 +9,6 @@ import Uled from "./components/ULED";
 import Nicer from "./components/Nicer";
 import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
-import { Document, Page } from "react-pdf";
 
 const App = () => {
   const location = useLocation();
