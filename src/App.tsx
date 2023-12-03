@@ -4,30 +4,44 @@ import "./fonts/BroadwayD.ttf";
 import "./App.css";
 import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
-import "./assets/resume.pdf";
 import Header from "./components/Header";
 import Uled from "./components/ULED";
 import Nicer from "./components/Nicer";
 import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
+import { Document, Page } from "react-pdf";
 
 const App = () => {
   const location = useLocation();
   console.log({ location });
   const [loading, setLoading] = useState(true);
-  const [showResume, setShowResume] = useState(false);
+
   const root = location.pathname === "/";
   const uled = location.pathname === "/uled";
   const agriculture = location.pathname === "/agriculture";
   const mywell = location.pathname === "/mywell";
-  console.log({ root });
+  const resume = location.pathname === "/resume";
+  console.log({ resume });
   useEffect(() => {
+    if (resume) {
+      setLoading(false);
+      return;
+    }
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
 
     return () => clearTimeout(timer);
   }, []);
+  if (resume && !loading) {
+    return (
+      <div className="Resume">
+        <iframe
+          src={require("/Users/isaacbarcroft/Documents/Portfolio/Portfolio/src/assets/files/resume.pdf")}
+        ></iframe>
+      </div>
+    );
+  }
 
   if (loading)
     return (
@@ -36,7 +50,7 @@ const App = () => {
           className="shimmer-loader"
           style={{
             fontWeight: "bold",
-            fontSize: "2rem",
+            fontSize: "3rem",
             fontFamily: "BroadwayD",
           }}
         >
@@ -53,20 +67,13 @@ const App = () => {
           {mywell && <MyWell />}
           {uled && <Uled />}
           {agriculture && <Nicer />}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              width: "40%",
-            }}
-          >
+          <div className="works">
             <Link to="/" className="link">
               <div
                 style={{
                   fontFamily: "BroadwayD",
                   fontWeight: "bold",
-                  fontSize: "1rem",
+                  fontSize: "2rem",
                   marginBottom: 8,
                 }}
               >
@@ -74,13 +81,21 @@ const App = () => {
               </div>
             </Link>
             <Link to="/mywell" className="link">
-              <div>My Well</div>
+              <div>
+                <span className="works-links">My Well</span>
+              </div>
             </Link>
             <Link to="/uled" className="link">
-              <div>Universal Ledger</div>
+              <div>
+                <span className="works-links">Universal Ledger</span>
+              </div>
             </Link>
             <Link to="/agriculture" className="link">
-              <div>Agricultural Sales Application</div>
+              <div>
+                <span className="works-links">
+                  Agricultural Sales Application
+                </span>
+              </div>
             </Link>
           </div>
         </div>
