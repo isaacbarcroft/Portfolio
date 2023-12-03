@@ -72,18 +72,17 @@ const App = () => {
           {agriculture && <Nicer />}
           {teaching && <Instructor />}
           <div className="works">
-            <Link to="/" className="link">
-              <div
-                style={{
-                  fontFamily: "BroadwayD",
-                  fontWeight: "bold",
-                  fontSize: "2rem",
-                  marginBottom: 8,
-                }}
-              >
-                Experience
-              </div>
-            </Link>
+            <div
+              style={{
+                fontFamily: "BroadwayD",
+                fontWeight: "bold",
+                fontSize: "2rem",
+                marginBottom: 8,
+              }}
+            >
+              Experience
+            </div>
+
             <Link to="/teaching" className="link">
               <div>
                 <span className="works-links">- Instructor</span>
