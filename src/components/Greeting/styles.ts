@@ -10,9 +10,9 @@ export const Container = styled.div`
   color: #f990e8;
   margin: 0 16px;
   @media (max-width: 768px) {
-    /* align-items: center; */
     width: 100%;
     margin: 0;
+    margin-bottom: 16px;
   }
 `;
 
