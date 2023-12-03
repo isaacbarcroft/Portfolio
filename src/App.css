@@ -8,7 +8,6 @@
   flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
-  min-height: -webkit-fill-available;
   background-color: black;
 }
 .Resume {
