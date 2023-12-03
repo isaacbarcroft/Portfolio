@@ -6,17 +6,7 @@ import ResumeIcon from "../../images/resume";
 
 const Footer: React.FC = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        bottom: 0,
-        flexDirection: "row",
-        marginInline: 32,
-        marginBlock: 32,
-        justifyContent: "flex-start",
-        alignSelf: "flex-start",
-      }}
-    >
+    <div className="icon-container">
       <GithubIcon />
       <LinkedInIcon />
       <EmailIcon />
