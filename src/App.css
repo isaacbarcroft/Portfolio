@@ -17,6 +17,7 @@
 .Loading {
   min-height: 100vh;
   max-height: 100vh;
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +47,6 @@ iframe {
   align-items: flex-start;
   justify-content: flex-start;
   color: #f990e8;
-  /* max-height: 100vh; */
   flex: 1;
   position: sticky;
 }
@@ -130,13 +130,15 @@ iframe {
 .content-Container {
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .popup {
   position: absolute;
-  top: 40px;
+  top: -90px;
   left: 50%;
   width: max-content;
   background-color: black;
@@ -197,6 +199,21 @@ iframe {
   transform: scale(1.1);
   text-shadow: 0 0 5px #f990e8, 0 0 10px #f990e8, 0 0 15px #f990e8;
 }
+
+.icon-container {
+  position: fixed;
+  display: flex;
+  bottom: 0;
+  margin: 24px;
+  justify-content: flex-start;
+  align-self: flex-start;
+}
+
+.tech-icon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 @media (width < 768px) {
   .App {
     height: min-content;
@@ -204,8 +221,30 @@ iframe {
   }
   .content-Container {
     flex-direction: column;
+    margin-bottom: 24px;
   }
   .works {
     width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .App-header {
+    background-image: none;
+  }
+  .icon-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    flex-direction: column;
+  }
+  .popup {
+    left: -5px;
+    right: auto;
+    top: -25px;
+    transform: translate(-100%, -50%);
+  }
+  .tech-icon-container {
+    justify-content: center;
   }
 }
