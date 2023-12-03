@@ -99,7 +99,7 @@ const App = () => {
               </div>
             </Link>
             <Link to="/agriculture" className="link">
-              <div style={{ textAlignLast: "center" }}>
+              <div>
                 <span className="works-links">
                   - Agricultural Sales Application
                 </span>
