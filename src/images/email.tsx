@@ -59,12 +59,13 @@ const EmailIcon: React.FC = () => {
       {popupVisible && (
         <div className="popup" style={{ top: "-90px" }} ref={popupRef}>
           <div
+            style={{ color: "#ff6ec7" }}
             onClick={(e) => {
               e.stopPropagation();
               copyToClipboard();
             }}
           >
-            Copy Email Clipboard
+            Copy Email to Clipboard
           </div>
           <a
             onClick={(e) => e.stopPropagation()}

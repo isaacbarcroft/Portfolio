@@ -14,10 +14,11 @@ const Greeting = () => (
     </Text>
     <Text style={{ color: "#0bd2d3" }}>
       {" "}
-      My expertise spans React, TypeScript, Node.js, and freelance projects.
-      With a passion for teaching, I'm dedicated to helping others achieve
-      greatness through sharing my knowledge in the dynamic world of web
-      development.
+      I specialize in React, TypeScript, and Node.js, with a wealth of
+      experience gained from various freelance projects. Passionate about
+      sharing knowledge, I am dedicated to helping others excel in the dynamic
+      realm of web development. Open to new opportunities, I also take on
+      freelance work to contribute my skills to exciting projects.
     </Text>
   </Container>
 );
