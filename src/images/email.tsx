@@ -57,7 +57,7 @@ const EmailIcon: React.FC = () => {
         />
       </svg>
       {popupVisible && (
-        <div className="popup" style={{ top: "-90px" }} ref={popupRef}>
+        <div className="popup" ref={popupRef}>
           <div
             style={{ color: "#ff6ec7" }}
             onClick={(e) => {
