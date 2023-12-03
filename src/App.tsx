@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./fonts/BroadwayD.ttf";
 import "./App.css";
 import { useLocation } from "react-router-dom";
@@ -9,6 +10,7 @@ import Uled from "./components/ULED";
 import Nicer from "./components/Nicer";
 import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
+import Instructor from "./components/Teaching";
 
 const App = () => {
   const location = useLocation();
@@ -20,6 +22,7 @@ const App = () => {
   const agriculture = location.pathname === "/agriculture";
   const mywell = location.pathname === "/mywell";
   const resume = location.pathname === "/resume";
+  const teaching = location.pathname === "/teaching";
   console.log({ resume });
   useEffect(() => {
     if (resume) {
@@ -61,11 +64,13 @@ const App = () => {
     <div className="App">
       <div className="App-header">
         <Header />
+
         <div className="content-Container ">
           {root && <Greeting />}
           {mywell && <MyWell />}
           {uled && <Uled />}
           {agriculture && <Nicer />}
+          {teaching && <Instructor />}
           <div className="works">
             <Link to="/" className="link">
               <div
@@ -76,29 +81,33 @@ const App = () => {
                   marginBottom: 8,
                 }}
               >
-                My Work
+                Experience
+              </div>
+            </Link>
+            <Link to="/teaching" className="link">
+              <div>
+                <span className="works-links">- Instructor</span>
               </div>
             </Link>
             <Link to="/mywell" className="link">
               <div>
-                <span className="works-links">My Well</span>
+                <span className="works-links">- My Well</span>
               </div>
             </Link>
             <Link to="/uled" className="link">
               <div>
-                <span className="works-links">Universal Ledger</span>
+                <span className="works-links">- Universal Ledger</span>
               </div>
             </Link>
             <Link to="/agriculture" className="link">
-              <div>
+              <div style={{ textAlignLast: "center" }}>
                 <span className="works-links">
-                  Agricultural Sales Application
+                  - Agricultural Sales Application
                 </span>
               </div>
             </Link>
           </div>
         </div>
-
         <Footer />
       </div>
     </div>
