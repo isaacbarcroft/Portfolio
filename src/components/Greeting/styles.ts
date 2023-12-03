@@ -9,6 +9,11 @@ export const Container = styled.div`
   font-weight: 600;
   color: #f990e8;
   margin: 0 16px;
+  @media (max-width: 768px) {
+    /* align-items: center; */
+    width: 100%;
+    margin: 0;
+  }
 `;
 
 export const Title = styled.div`

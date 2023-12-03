@@ -8,7 +8,13 @@
   flex-direction: row;
   min-height: 100vh;
   max-height: 100vh;
+  min-height: -webkit-fill-available;
   background-color: black;
+}
+.Resume {
+  display: flex;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 .Loading {
   min-height: 100vh;
@@ -18,7 +24,6 @@
   align-items: center;
   background-color: black;
   background-image: url("/Users/isaacbarcroft/Documents/Portfolio/Portfolio/src/assets/gradient-background.webp");
-  /* Adjust the alpha value (0.5) to make it slightly opaque */
 }
 .loading-text {
   background: linear-gradient(90deg, #0bd2d3, #f990e8);
@@ -27,7 +32,10 @@
   color: transparent;
   font-family: BroadwayD;
 }
-
+iframe {
+  width: 100vw;
+  height: 100vh;
+}
 .App-header {
   margin: 24px;
   border: 1px #0bd2d3 solid;
@@ -55,11 +63,11 @@
 }
 
 .shimmer-effect {
-  color: #f990e8; /* Set initial text color to match shimmer color */
-  padding: 10px; /* Add padding for better visibility */
-  position: relative; /* Add position relative for pseudo-element */
-  overflow: hidden; /* Hide overflow to contain pseudo-element */
-  transition: text-shadow 0.5s; /* Add a smooth transition for the text shadow */
+  color: #f990e8;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: text-shadow 0.5s;
 }
 
 .shimmer-effect:hover {
@@ -74,8 +82,8 @@
 }
 
 .anchor-link:hover {
-  transform: scale(1.1); /* Increase the size on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow on hover */
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 @keyframes shimmerLoader {
   0% {
@@ -127,12 +135,20 @@
   justify-content: space-between;
   width: 100%;
 }
+@media (width < 768px) {
+  .App {
+    /* height: 100%;
+    width: 100%; */
+  }
+  .content-Container {
+    flex-direction: column;
+  }
+}
 
 .popup {
   position: absolute;
-  top: 40px; /* Adjust the distance from the icon */
+  top: 40px;
   left: 50%;
-  /* transform: translateX(50%); */
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -163,8 +179,31 @@
   border: 1px #f990e8 solid;
   background-color: rgba(0, 0, 0, 0.5);
   font-family: BroadwayD;
-  /* border-radius: 16px; */
   color: #0bd2d3;
   padding: 8px;
   margin: 8px;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 40%;
+}
+
+.works-links {
+  font-family: BroadwayD;
+  color: #0bd2d3;
+  padding: 8px;
+  font-size: 24px;
+  background: linear-gradient(90deg, #f990e8, #0bd2d3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.works-links:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  text-shadow: 0 0 5px #f990e8, 0 0 10px #f990e8, 0 0 15px #f990e8;
 }

@@ -6,6 +6,10 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 `;
 
 export const TitleWrapper = styled.div`
@@ -17,6 +21,9 @@ export const Title = styled.div`
   font-weight: bold;
   font-size: 3rem;
   font-family: BroadwayD;
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 export const GradientText = styled.span`
   background: linear-gradient(90deg, #f990e8, #0bd2d3);
@@ -31,10 +38,17 @@ export const GradientText = styled.span`
     -webkit-background-clip: text;
     color: transparent;
   }
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const SubTitle = styled.div`
   color: #f990e8;
   font-style: italic;
   font-family: BroadwayD;
+  @media (max-width: 768px) {
+    text-align: center;
+    margin-bottom: 16px;
+  }
 `;
