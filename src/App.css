@@ -227,6 +227,8 @@ iframe {
     width: 100%;
     align-items: center;
     text-align: center;
+    border-top: 2px solid #f990e8;
+    padding-top: 24px;
   }
   .App-header {
     background-image: none;
