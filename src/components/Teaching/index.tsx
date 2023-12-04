@@ -22,10 +22,10 @@ const Instructor = () => (
         Instructor for a 7-night introductory web development course. In my TA
         role, I provided vital support and fostered a collaborative learning
         environment. As the Lead Instructor, I curated a comprehensive program
-        covering HTML, CSS, JavaScript, and Git. This experience deepened my
-        understanding of effective pedagogy, emphasizing the importance of
-        creating an atmosphere where students thrive and acquire practical
-        skills for real-world applications.
+        covering HTML, CSS, JavaScript, and Git. This experience enhanced my
+        grasp of effective teaching methods, underscoring the significance of
+        cultivating an environment that empowers students to excel and gain
+        practical skills relevant to real-world scenarios.
       </Text>
       <Link
         to="https://www.carolinacodeschool.org"
