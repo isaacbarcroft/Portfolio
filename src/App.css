@@ -712,4 +712,7 @@ iframe {
   .chrome {
     font-size: calc(0px + 7vh);
   }
+  .text {
+    top: 20%;
+  }
 }
