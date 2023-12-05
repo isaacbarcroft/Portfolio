@@ -563,7 +563,7 @@ iframe {
 }
 
 .chrome {
-  font-family: "Montserrat";
+  font-family: BroadwayD;
   font-weight: 900;
   font-size: calc(30px + 10vh);
   background-image: linear-gradient(
@@ -585,8 +585,8 @@ iframe {
 
 .chrome:before {
   content: attr(data-text);
-  text-shadow: -1px -1px 1px #2989cc, -2px -2px 1px #2989cc,
-    -3px -3px 1px #2989cc, 1px 1px 1px #000, 0px -1px 2px #000,
+  text-shadow: -1px -1px 1px #0bd2d3, -2px -2px 1px #0bd2d3,
+    -3px -3px 1px #0bd2d3, 1px 1px 1px #000, 0px -1px 2px #000,
     -1px -2px 2px #000, 0 0 5px rgba(255, 255, 255, 1);
   opacity: 1;
   position: absolute;
@@ -703,4 +703,13 @@ iframe {
     transparent 20%
   );
   animation: moving-grid 0.5s infinite linear;
+}
+
+@media (width < 768px) {
+  .outrun {
+    font-size: 35px;
+  }
+  .chrome {
+    font-size: calc(0px + 7vh);
+  }
 }
