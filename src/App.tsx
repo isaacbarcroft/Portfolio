@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./fonts/BroadwayD.ttf";
 import "./App.css";
+import Loader from "./components/Loader";
 import { useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -23,7 +24,7 @@ const App = () => {
   const mywell = location.pathname === "/mywell";
   const resume = location.pathname === "/resume";
   const teaching = location.pathname === "/teaching";
-  console.log({ resume });
+
   useEffect(() => {
     if (resume) {
       setLoading(false);
@@ -31,10 +32,11 @@ const App = () => {
     }
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
+
   if (resume && !loading) {
     return (
       <div className="Resume">
@@ -45,21 +47,7 @@ const App = () => {
     );
   }
 
-  if (loading)
-    return (
-      <div className="Loading">
-        <div
-          className="shimmer-loader"
-          style={{
-            fontWeight: "bold",
-            fontSize: "3rem",
-            fontFamily: "BroadwayD",
-          }}
-        >
-          <span className="loading-text">Isaac Barcroft's Portfolio</span>
-        </div>
-      </div>
-    );
+  if (loading) return <Loader />;
   return (
     <div className="App">
       <div className="App-header">
