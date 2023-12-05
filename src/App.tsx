@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Uled from "./components/ULED";
 import Nicer from "./components/Nicer";
+import res from "./assets/files/resume.pdf";
 import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
 import Instructor from "./components/Teaching";
@@ -39,9 +40,7 @@ const App = () => {
   if (resume && !loading) {
     return (
       <div className="Resume">
-        <iframe
-          src={require("/Users/isaacbarcroft/Documents/Portfolio/Portfolio/src/assets/files/resume.pdf")}
-        ></iframe>
+        <iframe src={res}></iframe>
       </div>
     );
   }
