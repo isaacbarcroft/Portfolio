@@ -15,7 +15,6 @@ import Instructor from "./components/Teaching";
 
 const App = () => {
   const location = useLocation();
-  console.log({ location });
   const [loading, setLoading] = useState(true);
 
   const root = location.pathname === "/";
