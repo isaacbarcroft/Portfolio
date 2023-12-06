@@ -32,7 +32,7 @@ iframe {
   justify-content: flex-start;
   color: #f990e8;
   flex: 1;
-  position: sticky;
+  /* position: sticky; */
 }
 
 @keyframes shimmer {
@@ -187,6 +187,7 @@ iframe {
   }
   .App-header {
     background-image: none;
+    margin: 16px;
   }
   .icon-container {
     position: absolute;
@@ -454,13 +455,13 @@ iframe {
       #0c1142 65%
     )
     fixed;
-  background-size: 100% var(--background-height, 100vh);
+  background-size: 100% var(--background-height, 100svh);
   overflow: hidden;
   position: absolute;
   left: 0;
   top: 0;
   width: 100lvw;
-  height: var(--background-height, 100vh);
+  height: var(--background-height, 100svh);
   z-index: -2;
 }
 
