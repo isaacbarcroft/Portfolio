@@ -1,6 +1,4 @@
-import React from "react";
 import { motion } from "framer-motion";
-
 import { Container, Title, Text, GradientText } from "../Greeting/styles";
 import { Link } from "react-router-dom";
 
