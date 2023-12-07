@@ -13,6 +13,7 @@ import res from "./assets/files/resume.pdf";
 import MyWell from "./components/MyWell";
 import Greeting from "./components/Greeting";
 import Instructor from "./components/Teaching";
+import { useKonami } from "react-konami-code";
 
 const App = () => {
   const location = useLocation();
@@ -36,7 +37,13 @@ const App = () => {
 
     return () => clearTimeout(timer);
   }, []);
-
+  let title = "Isaac Barcroft";
+  const konami = () => {
+    console.log("konami");
+    title = "Konami";
+    window.alert("Konami");
+  };
+  useKonami(konami);
   if (resume && !loading) {
     return (
       <div className="Resume">
@@ -47,53 +54,55 @@ const App = () => {
 
   if (loading) return <Loader />;
   return (
-    <div className="App">
-      <div className="App-header">
-        <Header />
+    <div>
+      <div className="App">
+        <div className="App-header">
+          <Header />
 
-        <div className="content-Container ">
-          {root && <Greeting />}
-          {mywell && <MyWell />}
-          {uled && <Uled />}
-          {agriculture && <Nicer />}
-          {teaching && <Instructor />}
-          <div className="works">
-            <div
-              style={{
-                fontFamily: "BroadwayD",
-                fontWeight: "bold",
-                fontSize: "2rem",
-                marginBottom: 8,
-              }}
-            >
-              Experience
+          <div className="content-Container ">
+            {root && <Greeting title={title} />}
+            {mywell && <MyWell />}
+            {uled && <Uled />}
+            {agriculture && <Nicer />}
+            {teaching && <Instructor />}
+            <div className="works">
+              <div
+                style={{
+                  fontFamily: "BroadwayD",
+                  fontWeight: "bold",
+                  fontSize: "2rem",
+                  marginBottom: 8,
+                }}
+              >
+                Experience
+              </div>
+
+              <Link to="/teaching" className="link">
+                <div>
+                  <span className="works-links">- Instructor</span>
+                </div>
+              </Link>
+              <Link to="/mywell" className="link">
+                <div>
+                  <span className="works-links">- My Well</span>
+                </div>
+              </Link>
+              <Link to="/uled" className="link">
+                <div>
+                  <span className="works-links">- Universal Ledger</span>
+                </div>
+              </Link>
+              <Link to="/agriculture" className="link">
+                <div>
+                  <span className="works-links">
+                    - Agricultural Sales Application
+                  </span>
+                </div>
+              </Link>
             </div>
-
-            <Link to="/teaching" className="link">
-              <div>
-                <span className="works-links">- Instructor</span>
-              </div>
-            </Link>
-            <Link to="/mywell" className="link">
-              <div>
-                <span className="works-links">- My Well</span>
-              </div>
-            </Link>
-            <Link to="/uled" className="link">
-              <div>
-                <span className="works-links">- Universal Ledger</span>
-              </div>
-            </Link>
-            <Link to="/agriculture" className="link">
-              <div>
-                <span className="works-links">
-                  - Agricultural Sales Application
-                </span>
-              </div>
-            </Link>
           </div>
+          <Footer />
         </div>
-        <Footer />
       </div>
     </div>
   );
