@@ -17,14 +17,22 @@ const Instructor = () => (
     >
       <Title>Instructing</Title>
       <Text>
-        I've contributed to a code school as both a Teaching Assistant and Lead
-        Instructor for a 7-night introductory web development course. In my TA
-        role, I provided vital support and fostered a collaborative learning
-        environment. As the Lead Instructor, I curated a comprehensive program
-        covering HTML, CSS, JavaScript, and Git. This experience enhanced my
-        grasp of effective teaching methods, underscoring the significance of
-        cultivating an environment that empowers students to excel and gain
-        practical skills relevant to real-world scenarios.
+        I contribute to{" "}
+        <Link
+          className="link"
+          to="https://www.carolinacodeschool.org"
+          target="_blank"
+        >
+          Carolina Code School
+        </Link>{" "}
+        as both the Teaching Assistant for the immersive 12-week course, and as
+        the Lead Instructor for the 7-night introductory web development course.
+        In my TA role, I provided vital support and foster a collaborative
+        learning environment. As the Lead Instructor, I curated a comprehensive
+        program covering HTML, CSS, JavaScript, and Git. This experience
+        enhanced my grasp of effective teaching methods, underscoring the
+        significance of cultivating an environment that empowers students to
+        excel and gain practical skills relevant to real-world scenarios.
       </Text>
       <Link
         to="https://www.carolinacodeschool.org"
