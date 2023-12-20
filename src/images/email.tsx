@@ -14,7 +14,6 @@ const EmailIcon: React.FC = () => {
   };
   const openEmailApp = (e: React.MouseEvent) => {
     e.stopPropagation();
-    // Add logic to open the default email app here
     setPopupVisible(false);
   };
   const handleClickOutside = (event: MouseEvent) => {
