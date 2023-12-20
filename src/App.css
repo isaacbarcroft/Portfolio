@@ -32,7 +32,6 @@ iframe {
   justify-content: flex-start;
   color: #f990e8;
   flex: 1;
-  /* position: sticky; */
 }
 
 @keyframes shimmer {
@@ -491,7 +490,7 @@ iframe {
   opacity: 0.2;
 }
 
-/*stars*/
+/* Stars*/
 .stars:after {
   transform: translateY(-40%);
   content: " ";
